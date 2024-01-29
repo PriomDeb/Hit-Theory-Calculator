@@ -33,6 +33,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Update the cell with the correct calculation
         cellElement.textContent = result.toFixed(2);
+
+        // Apply dynamic color based on conditions
+        if (
+          (Math.abs(result) >= 27 && Math.abs(result) <= 33) ||
+          (Math.abs(result) >= 55 && Math.abs(result) <= 65) ||
+          (Math.abs(result) >= 112 && Math.abs(result) <= 128)
+        ) {
+          cellElement.style.backgroundColor = "green";
+        } else if (
+          (Math.abs(result) >= 42 && Math.abs(result) <= 48) ||
+          (Math.abs(result) >= 85 && Math.abs(result) <= 95) ||
+          (Math.abs(result) >= 172 && Math.abs(result) <= 188)
+        ) {
+          cellElement.style.backgroundColor = "red";
+        } else {
+          // Reset background color for other cases
+          cellElement.style.backgroundColor = "";
+        }
       }
     }
   }
