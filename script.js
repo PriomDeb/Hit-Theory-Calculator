@@ -4,14 +4,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // Your existing code for calculateHit and updateTableCells
   function calculateHit() {
     // Get user input
-    const moonValue =
-      parseFloat(document.getElementById("moonInput").value) || 0;
-    const saturnValue =
-      parseFloat(document.getElementById("saturnInput").value) || 0;
-    const marsValue =
-      parseFloat(document.getElementById("marsInput").value) || 0;
-    const venusValue =
-      parseFloat(document.getElementById("venusInput").value) || 0;
+    const moonInput = document.getElementById("moonInput");
+    const saturnInput = document.getElementById("saturnInput");
+    const marsInput = document.getElementById("marsInput");
+    const venusInput = document.getElementById("venusInput");
+
+    const moonValue = parseInput(moonInput.value) || 0;
+    const saturnValue = parseInput(saturnInput.value) || 0;
+    const marsValue = parseInput(marsInput.value) || 0;
+    const venusValue = parseInput(venusInput.value) || 0;
 
     // Update table cells with calculated values
     updateTableCells([moonValue, saturnValue, marsValue, venusValue]);
@@ -63,4 +64,17 @@ document.addEventListener("DOMContentLoaded", function () {
   inputElements.forEach((input) => {
     input.addEventListener("input", calculateHit);
   });
+
+  // Function to parse expressions like "10 + value" or "10 - value"
+  function parseInput(input) {
+    const match = input.match(/^([+\-]?\d+)\s*([+\-])?\s*(\d+)?$/);
+    if (match) {
+      const constant = parseFloat(match[1]) || 0;
+      const operation = match[2] || "+";
+      const value = parseFloat(match[3]) || 0;
+
+      return operation === "+" ? constant + value : constant - value;
+    }
+    return null;
+  }
 });
