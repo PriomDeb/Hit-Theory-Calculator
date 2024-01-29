@@ -55,4 +55,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Ensure calculateHit is accessible in the global scope for the onclick attribute
   window.calculateHit = calculateHit;
+
+  // Listen for input changes and recalculate the hit table
+  const inputElements = document.querySelectorAll(
+    '.container input[type="text"]'
+  );
+  inputElements.forEach((input) => {
+    input.addEventListener("input", calculateHit);
+  });
 });
