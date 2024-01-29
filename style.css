@@ -49,6 +49,10 @@ input[type="text"] {
     border: 1px solid #555;
 }
 
+input[type="text"]:focus {
+    box-shadow: 0 0 80px rgba(255, 255, 0, 0.8);
+}
+
 button {
     background-color: #cc8500;
     color: #fff;
