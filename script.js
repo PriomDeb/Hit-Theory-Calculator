@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to parse expressions like "10 + value" or "10 - value"
   function parseInput(input) {
-    const match = input.match(/^([+\-]?\d+)\s*([+\-])?\s*(\d+)?$/);
+    const match = input.match(/^([+\-]?[\d.]+)\s*([+\-])?\s*([\d.]+)?$/);
     if (match) {
       const constant = parseFloat(match[1]) || 0;
       const operation = match[2] || "+";
