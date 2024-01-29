@@ -8,8 +8,8 @@
 </head>
 <body>
     <div id="app" class="container">
-        <label for="planetInput">Enter values for Moon, Saturn, Mars, and Venus:</label>
-        <input type="text" id="planetInput" placeholder="e.g., 1.5, 2.0, 0.5, 3.0">
+        <!-- <label for="planetInput">Enter values for Moon, Saturn, Mars, and Venus:</label>
+        <input type="text" id="planetInput" placeholder="e.g., 1.5, 2.0, 0.5, 3.0"> -->
 
         <table id="hitTable">
             <thead>
@@ -23,28 +23,40 @@
             </thead>
             <tbody>
                 <tr>
-                    <th>Moon</th>
+                    <th>
+                        <label for="moonInput">Moon</label>
+                        <input type="text" id="moonInput" placeholder="Enter value">
+                    </th>
                     <td id="MoonToMoon"></td>
                     <td id="MoonToSaturn"></td>
                     <td id="MoonToMars"></td>
                     <td id="MoonToVenus"></td>
                 </tr>
                 <tr>
-                    <th>Saturn</th>
+                    <th>
+                        <label for="saturnInput">Saturn</label>
+                        <input type="text" id="saturnInput" placeholder="Enter value">
+                    </th>
                     <td id="SaturnToMoon"></td>
                     <td id="SaturnToSaturn"></td>
                     <td id="SaturnToMars"></td>
                     <td id="SaturnToVenus"></td>
                 </tr>
                 <tr>
-                    <th>Mars</th>
+                    <th>
+                        <label for="marsInput">Mars</label>
+                        <input type="text" id="marsInput" placeholder="Enter value">
+                    </th>
                     <td id="MarsToMoon"></td>
                     <td id="MarsToSaturn"></td>
                     <td id="MarsToMars"></td>
                     <td id="MarsToVenus"></td>
                 </tr>
                 <tr>
-                    <th>Venus</th>
+                    <th>
+                        <label for="venusInput">Venus</label>
+                        <input type="text" id="venusInput" placeholder="Enter value">
+                    </th>
                     <td id="VenusToMoon"></td>
                     <td id="VenusToSaturn"></td>
                     <td id="VenusToMars"></td>

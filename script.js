@@ -4,19 +4,17 @@ document.addEventListener("DOMContentLoaded", function () {
   // Your existing code for calculateHit and updateTableCells
   function calculateHit() {
     // Get user input
-    const planetInput = document
-      .getElementById("planetInput")
-      .value.split(",")
-      .map(parseFloat);
-
-    // Validate input
-    if (planetInput.length !== 4 || planetInput.some(isNaN)) {
-      alert("Please enter valid values for Moon, Saturn, Mars, and Venus.");
-      return;
-    }
+    const moonValue =
+      parseFloat(document.getElementById("moonInput").value) || 0;
+    const saturnValue =
+      parseFloat(document.getElementById("saturnInput").value) || 0;
+    const marsValue =
+      parseFloat(document.getElementById("marsInput").value) || 0;
+    const venusValue =
+      parseFloat(document.getElementById("venusInput").value) || 0;
 
     // Update table cells with calculated values
-    updateTableCells(planetInput);
+    updateTableCells([moonValue, saturnValue, marsValue, venusValue]);
   }
 
   function updateTableCells(planetInput) {
