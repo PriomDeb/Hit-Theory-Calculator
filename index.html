@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet to Planet Hit Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" class="container">
+        <label for="planetInput">Enter values for Moon, Saturn, Mars, and Venus:</label>
+        <input type="text" id="planetInput" placeholder="e.g., 1.5, 2.0, 0.5, 3.0">
+
+        <table id="hitTable">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Moon</th>
+                    <th>Saturn</th>
+                    <th>Mars</th>
+                    <th>Venus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Moon</th>
+                    <td id="MoonToMoon"></td>
+                    <td id="MoonToSaturn"></td>
+                    <td id="MoonToMars"></td>
+                    <td id="MoonToVenus"></td>
+                </tr>
+                <tr>
+                    <th>Saturn</th>
+                    <td id="SaturnToMoon"></td>
+                    <td id="SaturnToSaturn"></td>
+                    <td id="SaturnToMars"></td>
+                    <td id="SaturnToVenus"></td>
+                </tr>
+                <tr>
+                    <th>Mars</th>
+                    <td id="MarsToMoon"></td>
+                    <td id="MarsToSaturn"></td>
+                    <td id="MarsToMars"></td>
+                    <td id="MarsToVenus"></td>
+                </tr>
+                <tr>
+                    <th>Venus</th>
+                    <td id="VenusToMoon"></td>
+                    <td id="VenusToSaturn"></td>
+                    <td id="VenusToMars"></td>
+                    <td id="VenusToVenus"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <button onclick="calculateHit()">Calculate Hit</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
