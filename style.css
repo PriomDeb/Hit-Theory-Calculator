@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 1200px; /* Increase the max-width to accommodate both tables side by side */
     margin: 50px auto;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.8);
@@ -15,7 +15,8 @@ body {
     box-shadow: 0 0 100px rgba(255, 255, 255, 0.1);
 }
 
-#title {
+#title,
+#houseToPlanetTitle {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
@@ -23,19 +24,29 @@ body {
     color: #ddd;
 }
 
-#hitTable {
+.tables-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.table {
+    width: 48%; /* Adjust the width of each table as needed */
+}
+
+#hitTable, #houseToPlanetTable {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
 
-#hitTable th, #hitTable td {
+#hitTable th, #hitTable td, #houseToPlanetTable th, #houseToPlanetTable td {
     border: 1px solid #333;
     padding: 10px;
     text-align: center;
 }
 
-#hitTable th {
+#hitTable th, #houseToPlanetTable th {
     background-color: #222;
     color: #ddd;
 }
