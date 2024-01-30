@@ -3,15 +3,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function calculateHit() {
     // Get user input
-    const moonInput = document.getElementById("moonInput");
+    const jupiterInput = document.getElementById("jupiterInput");
     const saturnInput = document.getElementById("saturnInput");
-    const marsInput = document.getElementById("marsInput");
+    const mercuryInput = document.getElementById("mercuryInput");
+    const ketuInput = document.getElementById("ketuInput");
     const venusInput = document.getElementById("venusInput");
+    const sunInput = document.getElementById("sunInput");
+    const moonInput = document.getElementById("moonInput");
+    const marsInput = document.getElementById("marsInput");
+    const rahuInput = document.getElementById("rahuInput");
 
-    const moonValue = parseInput(moonInput.value) || 0;
+    const jupiterValue = parseInput(jupiterInput.value) || 0;
     const saturnValue = parseInput(saturnInput.value) || 0;
-    const marsValue = parseInput(marsInput.value) || 0;
+    const mercuryValue = parseInput(mercuryInput.value) || 0;
+    const ketuValue = parseInput(ketuInput.value) || 0;
     const venusValue = parseInput(venusInput.value) || 0;
+    const sunValue = parseInput(sunInput.value) || 0;
+    const moonValue = parseInput(moonInput.value) || 0;
+    const marsValue = parseInput(marsInput.value) || 0;
+    const rahuValue = parseInput(rahuInput.value) || 0;
 
     const house1Input = document.getElementById("house1Input");
     const house2Input = document.getElementById("house2Input");
@@ -35,7 +45,18 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("House 6 Value:", house6Value);
 
     // Update table cells with calculated values
-    updateTableCells([moonValue, saturnValue, marsValue, venusValue]);
+    updateTableCells([
+      jupiterValue,
+      saturnValue,
+      mercuryValue,
+      ketuValue,
+      venusValue,
+      sunValue,
+      moonValue,
+      marsValue,
+      rahuValue,
+    ]);
+
     updateHouseTableCells(
       [moonValue, saturnValue, marsValue, venusValue],
       [
@@ -50,7 +71,17 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function updateTableCells(planetInput) {
-    const planetNames = ["Moon", "Saturn", "Mars", "Venus"];
+    const planetNames = [
+      "Jupiter",
+      "Saturn",
+      "Mercury",
+      "Ketu",
+      "Venus",
+      "Sun",
+      "Moon",
+      "Mars",
+      "Rahu",
+    ];
 
     // Update table cells using nested loops
     for (let i = 0; i < planetNames.length; i++) {
