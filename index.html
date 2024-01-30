@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planet to Planet Hit Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="app" class="container">
         <h1 id="title">☄️🌠Planet to Planet Hit Calculator 🌠☄️</h1>
@@ -63,9 +65,92 @@
                 </tr>
             </tbody>
         </table>
-        
+
+        <!-- House to Planet Hit -->
+        <h1 id="title">☄️🌠House to Planet Hit Calculator 🌠☄️</h1>
+        <table id="hitTable">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Moon</th>
+                    <th>Saturn</th>
+                    <th>Mars</th>
+                    <th>Venus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>
+                        <label for="house1Input">House1</label>
+                        <input type="text" id="house1Input" placeholder="Enter value">
+                    </th>
+                    <td id="House1ToMoon"></td>
+                    <td id="House1ToSaturn"></td>
+                    <td id="House1ToMars"></td>
+                    <td id="House1ToVenus"></td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="house2Input">House2</label>
+                        <input type="text" id="house2Input" placeholder="Enter value">
+                    </th>
+                    <td id="House2ToMoon"></td>
+                    <td id="House2ToSaturn"></td>
+                    <td id="House2ToMars"></td>
+                    <td id="House2ToVenus"></td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="house3Input">House3</label>
+                        <input type="text" id="house3Input" placeholder="Enter value">
+                    </th>
+                    <td id="House3ToMoon"></td>
+                    <td id="House3ToSaturn"></td>
+                    <td id="House3ToMars"></td>
+                    <td id="House3ToVenus"></td>
+                </tr>
+                <!-- House4 -->
+                <tr>
+                    <th>
+                        <label for="house4Input">House4</label>
+                        <input type="text" id="house4Input" placeholder="Enter value">
+                    </th>
+                    <td id="House4ToMoon"></td>
+                    <td id="House4ToSaturn"></td>
+                    <td id="House4ToMars"></td>
+                    <td id="House4ToVenus"></td>
+                </tr>
+
+                <!-- House5 -->
+                <tr>
+                    <th>
+                        <label for="house5Input">House5</label>
+                        <input type="text" id="house5Input" placeholder="Enter value">
+                    </th>
+                    <td id="House5ToMoon"></td>
+                    <td id="House5ToSaturn"></td>
+                    <td id="House5ToMars"></td>
+                    <td id="House5ToVenus"></td>
+                </tr>
+
+                <!-- House6 -->
+                <tr>
+                    <th>
+                        <label for="house6Input">House6</label>
+                        <input type="text" id="house6Input" placeholder="Enter value">
+                    </th>
+                    <td id="House6ToMoon"></td>
+                    <td id="House6ToSaturn"></td>
+                    <td id="House6ToMars"></td>
+                    <td id="House6ToVenus"></td>
+                </tr>
+
+            </tbody>
+        </table>
+
         <button onclick="calculateHit()">Calculate Hit</button>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
