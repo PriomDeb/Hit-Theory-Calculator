@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Update table cells using nested loops
     for (let i = 0; i < houseNames.length; i++) {
-      for (let j = i; j < planetNames.length; j++) {
+      for (let j = 0; j < planetNames.length; j++) {
         const cellId = `${houseNames[i]}To${planetNames[j]}`;
         const cellElement = document.getElementById(cellId);
 
