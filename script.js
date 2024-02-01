@@ -111,7 +111,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const cellElement = document.getElementById(cellId);
 
         // Calculate row value - column value
-        const result = planetInput[i] - planetInput[j];
+        var result = planetInput[i] - planetInput[j];
+
+        if (result < -200) {
+          result = 360 - -1 * result;
+        }
+
+        if (Math.abs(result) > 200) {
+          result = 360 - result;
+        }
 
         // Update the cell with the correct calculation
         cellElement.textContent = result.toFixed(2);
@@ -171,7 +179,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const cellElement = document.getElementById(cellId);
 
         // Calculate row value - column value
-        const result = houseInput[i] - planetInput[j];
+        var result = houseInput[i] - planetInput[j];
+
+        if (result < -200) {
+          result = 360 - -1 * result;
+        }
+
+        if (Math.abs(result) > 200) {
+          result = 360 - result;
+        }
 
         // Update the cell with the correct calculation
         cellElement.textContent = result.toFixed(2);
